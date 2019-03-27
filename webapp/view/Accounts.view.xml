@@ -1,0 +1,30 @@
+<mvc:View controllerName="com.concurit.sapi.sapi.controller.Accounts" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="table" items="{accounts>/data}">
+							<columns>
+								<Column id="userColumn">
+									<Text text="Id"/>
+								</Column>
+								<Column id="messageColumn" hAlign="Center">
+									<Text text="Name"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectHeader title="{accounts>Id}"/>
+										<Text text="{accounts>Name}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
