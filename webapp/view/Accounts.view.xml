@@ -2,22 +2,30 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
+				<Page id="page" title="Accounts">
 					<content>
 						<Table id="table" items="{accounts>/data}">
 							<columns>
-								<Column id="userColumn">
-									<Text text="Id"/>
-								</Column>
-								<Column id="messageColumn" hAlign="Center">
+								<Column id="nameColumn">
 									<Text text="Name"/>
+								</Column>
+								<Column id="buColumn">
+									<Text text="BU"/>
+								</Column>
+								<Column id="cityColumn">
+									<Text text="City"/>
+								</Column>
+								<Column id="stateColumn">
+									<Text text="State"/>
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<ObjectHeader title="{accounts>Id}"/>
 										<Text text="{accounts>Name}"/>
+										<Text text="{accounts>Business_Unit__c}"/>
+										<Text text="{accounts>Billing_City__c}"/>
+										<Text text="{accounts>Billing_State_Province__c}"/>
 									</cells>
 								</ColumnListItem>
 							</items>
